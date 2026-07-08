@@ -1,0 +1,26 @@
+{
+  "name": "interview-lab",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Interview Lab — a private, on-device AI mock-interview simulator for tech and cybersecurity students (voice or text; WebLLM / Ollama / simulation).",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@mlc-ai/web-llm": "^0.2.84",
+    "gpt-tokenizer": "^3.4.0",
+    "kokoro-js": "^1.2.1",
+    "lucide-react": "^0.469.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.6",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tailwindcss": "^4.0.6",
+    "vite": "^6.1.0"
+  }
+}

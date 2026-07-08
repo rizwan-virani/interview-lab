@@ -1,0 +1,10 @@
+node_modules
+dist
+*.log
+.DS_Store
+
+# internal project notes — never publish
+CLAUDE.md
+CLAUDE.local.md
+.claude/
+.claude-notes.local.md

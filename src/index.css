@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* Global type scale. The whole UI is built with Tailwind's rem-based sizes, so
+   raising the root font size enlarges every piece of text proportionally. */
+html {
+  font-size: 15px;
+}
+
+body {
+  background-color: #020617;
+  color: #e2e8f0;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Flashing crimson alert used by Context Crunch + Shadow AI Tracker */
+@keyframes flash-red {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+.animate-flash {
+  animation: flash-red 0.7s ease-in-out infinite;
+}
+
+/* Slow scanning shimmer for processing states */
+@keyframes scanline {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+.animate-scan {
+  background: linear-gradient(
+    90deg,
+    rgba(99, 102, 241, 0) 0%,
+    rgba(99, 102, 241, 0.25) 50%,
+    rgba(99, 102, 241, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: scanline 1.4s linear infinite;
+}
+
+/* Thin dark scrollbars */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+*::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
